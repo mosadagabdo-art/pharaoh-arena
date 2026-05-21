@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharaoh Arena</title>
+    <style>
+        body { background-color: #0b0c10; color: #fff; font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; }
+        .score { font-size: 40px; font-weight: bold; margin: 20px; color: #c5a059; }
+        .click-btn { width: 200px; height: 200px; border-radius: 50%; background: #c5a059; border: 5px solid #fff; font-size: 70px; display: flex; justify-content: center; align-items: center; cursor: pointer; user-select: none; box-shadow: 0 0 20px #c5a059; transition: transform 0.1s; }
+        .click-btn:active { transform: scale(0.9); }
+    </style>
+</head>
+<body>
+    <h2>🏛️ PHARAOH'S ARENA 🏛️</h2>
+    <div class="score">🪙 <span id="coins">0</span></div>
+    <div class="click-btn" onclick="hit()">🦅</div>
+    <script>
+        let count = 0;
+        function hit() {
+            count++;
+            document.getElementById('coins').innerText = count;
+        }
+    </script>
+</body>
+</html>
